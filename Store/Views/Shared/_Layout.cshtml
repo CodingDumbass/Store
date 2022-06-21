@@ -1,0 +1,77 @@
+﻿@using Store.Models
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>@ViewData["Title"] - Store</title>
+		<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+		<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+		<link rel="stylesheet" href="~/Store.styles.css" asp-append-version="true" />
+		<link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+		<link rel="stylesheet" href="~/js/site.js" asp-append-version="true" />
+		<script src="jquery.js"></script>
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+				<div class="navbar">
+					<a asp-area="" asp-controller="Shop" asp-action="MainPage">
+						<img src="~/images/weblogo.png" alt="ebag" width="40" height="40" />
+					</a>
+					<input type="text" placeholder="Search..." />
+					<div class="box">
+						<a class="button" href="#divOne">
+							<img src="~/images/usericon.png" alt="user" width="30" height="30" />
+						</a>
+					</div>
+					<div class="dropdown">
+						<button class="dropbtn">
+							<a asp-controller="Cart" asp-action="Index">
+								<img src="~/images/cart.jpg" alt="cart" width="40" height="40" />
+							</a>
+						</button>
+						<div class="dropdown-content"> @* <a href="#">Link 1</a>
+							<a href="#">Link 2</a>
+							<a href="#">Link 3</a>*@
+						</div>
+					</div>
+					<div class="overlay" id="divOne">
+						<div class="wrapper">
+							<div class="tab-list">
+								<div class="tab">
+									<div id="btn-1" data-showbutton="1" onload="clearData()">Login</div>
+								</div>
+								<div class="tab">
+									<div id="btn-2" data-showbutton="2" onload="clearData()">Register</div>
+								</div>
+							</div>
+							<div data-button="1">
+								<a href="#" class="close" onclick="clearData()">&times;</a>
+								<div class="content">
+									<div class="container text-active">
+										<partial name="_LoginForm" for="@CustomerModel.customer"/>
+									</div>
+								</div>
+							</div>
+							<div id="is-hidden" data-button="2">
+								<a href="#" class="close" onclick="clearData()">&times;</a>
+								<div class="content">
+									<div class="container">
+										<partial name="_RegisterForm" for="@CustomerModel.customer"/>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<div class="container">
+			<main role="main" class="pb-3"> @RenderBody() </main>
+		</div>
+		<script src="~/lib/jquery/dist/jquery.min.js"></script>
+		<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="~/js/site.js" asp-append-version="true"></script> @await RenderSectionAsync("Scripts", required: false)
+	</body>
+</html>

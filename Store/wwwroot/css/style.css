@@ -1,0 +1,251 @@
+﻿.box {
+    text-align: center;
+}
+
+.button {
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+/*login-register stuff*/
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.8);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.wrapper {
+    margin: 70px auto;
+    padding: 20px;
+    background: #e7e7e7;
+    border-radius: 5px;
+    height:42%;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+.wrapper .tab {
+    margin-top: 10px;
+    
+}
+
+.wrapper h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+.wrapper .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 20ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+
+.wrapper .content {
+    max-height: 30%;
+    overflow: auto;
+}
+
+#is-hidden {
+    display: none;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    border: none;
+    height: 40px;
+    width: 40px;
+    padding: 0px;
+}
+.image-style{
+    width:100px;
+    height:100px;
+}
+.tab {
+    
+    display: inline-block;
+    vertical-align: middle;
+    width: fit-content;
+    padding: 8px 15px;
+    user-select: none;
+}
+.tabs-list {
+    text-align:center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+/*category stuff*/
+
+.category-products:not(:first-child) {
+    margin-top: 50px;
+}
+
+.items-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+
+.items-pushed .item-popup {
+    margin-right: 2%;
+    width: 18.4%;
+}
+
+.item {
+    background-color: #fff;
+    margin-bottom: 15px;
+    position: relative;
+    text-align: center;
+}
+
+.item-information {
+    padding-top: 20px;
+    position: relative;
+}
+
+.item .img-container {
+    cursor: pointer;
+    display: block;
+    width: 154px;
+    height: 154px;
+    margin-bottom: 9px;
+    position: relative;
+}
+
+.item .img-container img {
+    max-height: 100%;    
+}
+img {
+    max-width: 100%;
+}
+
+.item .product-weight {
+    border-radius: 9px;
+    font-size: 14px;
+    font-size: .875rem;
+    padding: 1px 8px;
+    white-space: nowrap;
+}
+/*.item .product-weight {
+    align-items: center;
+    margin-bottom: 12px;
+    text-align: center;
+}
+.item .product-weight {
+    border-radius: 9px;
+    font-size: 14px;
+    padding: 1px 8px;
+    white-space: nowrap;
+}*/
+
+.product-weight {
+    background-color: #7f7f7f;
+    color: #fff;
+    display: inline-block;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+}
+.product-exp-date {
+    color: #979797;
+    font-size: 13px;
+    font-size: .8125rem;
+    height: 14px;
+    margin: 8px 0 0;
+    min-height: 14px;
+}
+.item .item-purchase-info {
+    min-height: 140px;
+    padding: 13px 10px 42px;
+    position: relative;
+}
+.item-purchase-info .product-price {
+    line-height: 1.2;
+}
+
+.item-purchase-info p {
+    font-size: 28px;
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.item-purchase-info .price-per-kg {
+    color: #979797;
+    line-height: 1.2;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.btn-buy {
+    background-color: #fff;
+    border: 1px solid #c4c5c4;
+    border-radius: 17px;
+    box-shadow: 0 6px 12px 0 #0000000f;
+    color: #000;
+    display: inline-block;
+    font-size: 13px;
+    font-size: .8125rem;
+    font-weight: 700;
+    height: 33px;
+    line-height: 31px;
+    padding: 0 14px;
+    text-align: center;
+    text-decoration: none;
+}
+.btn-buy:hover {
+    background-color: rgb(20, 150, 125);
+}
+.text-styling {
+    color: inherit;
+    font-size:20px;
+    text-decoration:none;
+}
+.text-styling:hover {
+    text-decoration:underline;
+    color: inherit;
+}

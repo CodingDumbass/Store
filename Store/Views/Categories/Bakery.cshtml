@@ -1,0 +1,74 @@
+﻿@using Store.Models
+@{ ViewData["Title"] = "Bakery"; } 
+
+<section class="category-products">
+
+	<h1>Bakery</h1>
+
+	<div class="items-pushed items-list">
+
+		@foreach(var item in Model)
+		{
+			<div class="item-popup">
+				<article class="item">
+					<div class="item-information">
+						<a href="#@item.ProductName/@item.ProductId" class="img-container">
+							<img src="@item.ProductImage" />
+						</a>
+						<div class="product-weight">
+							<div></div>
+							<div>
+								<p class="product-weight">@item.ProductWeight gm</p>
+							</div>
+						</div>
+						<h2>
+							<a href="#@item.ProductName/@item.ProductId" class="text-styling"> @item.ProductName </a>
+						</h2>
+						<p class="product-exp-date"></p>
+					</div>
+					<div class="item-purchase-info">
+						<p class="product-price"> @item.ProductPrice <span>lv.</span>
+						</p>
+						<div class="price-per-kg"></div>
+						<form>
+							<button class="btn-buy" >Add to cart</button>
+						</form>
+					</div>
+				</article>
+			</div>
+		}
+	</div> 
+	
+</section>
+@foreach(var item in Model)
+{
+	<div class="overlay" id="@item.ProductName/@item.ProductId">
+		<div class="wrapper">
+			<div class="tab-list">
+				<div class="tab">
+					<div id="btn-1" data-showbutton="1" onload="clearData()">Login</div>
+				</div>
+				<div class="tab">
+					<div id="btn-2" data-showbutton="2" onload="clearData()">Register</div>
+				</div>
+			</div>
+			<div data-button="1">
+				<a href="#" class="close" onclick="clearData()">&times;</a>
+				<div class="content">
+					<div class="container text-active">
+						
+					</div>
+				</div>
+			</div>
+			<div id="is-hidden" data-button="2">
+				<a href="#" class="close" onclick="clearData()">&times;</a>
+				<div class="content">
+					<div class="container">
+						
+					</div>
+				</div>
+			</div>
+		</div>				
+	</div>
+}
+		

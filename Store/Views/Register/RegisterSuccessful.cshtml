@@ -1,0 +1,19 @@
+﻿@model Store.Models.CustomerModel 
+
+@{ ViewData["Title"] = "RegisterSuccessful"; }
+
+<h1>RegisterSuccessful</h1>
+
+<div>
+	<h4>CustomerModel</h4>
+	<hr />
+	<dl class="row">
+		<dt class="col-sm-2"> @Html.DisplayNameFor(model => model.CustomerEmail) </dt>
+		<dd class="col-sm-10"> @Html.DisplayFor(model => model.CustomerEmail) </dd>
+		<dt class="col-sm-2"> @Html.DisplayNameFor(model => model.CustomerPassword) </dt>
+		<dd class="col-sm-10"> @Html.DisplayFor(model => model.CustomerPassword) </dd>
+	</dl>
+</div>
+<div>
+	<a asp-controller="Shop" asp-action="MainPage">Back to MainPage</a>
+</div>
